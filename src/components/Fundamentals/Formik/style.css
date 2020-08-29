@@ -1,0 +1,54 @@
+body {
+  background-color: rgb(245, 245, 245);
+  margin: 0;
+}
+
+.App {
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  max-width: 80%;
+  margin: auto;
+}
+
+label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 12px;
+}
+button:disabled {
+  background: grey;
+}
+
+button {
+  color: rgb(245, 245, 245);
+  background: rgb(16, 107, 16);
+  border: none;
+  padding: 8px 12px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+span {
+  color: rgb(187, 68, 68);
+  margin-top: 2px;
+  font-size: 12px;
+}
+
+pre {
+  display: block;
+  margin: auto;
+  text-align: center;
+  margin-top: 20px;
+}

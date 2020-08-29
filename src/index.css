@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root {
+  --primary-color: #1f619c;
+  --accentColor: #43cea2;
+  --alert: #ee5f8f;
+  --thirdColor: #9aefd3;
+  --contrastColor: #0a003a;
+  --success: #2ed573;
+  --basic: #fff;
+  --lightGray: #f5f6fa;
+  --basicText: #1B1433;
+  --gray: #bdc3c7;
+}
+
+/* Ajuste fino para alinhar o textarea com a imagem do autor no comentário */
+.ant-comment-content-author {
+  margin-bottom: 0 !important;
+}
