@@ -11,12 +11,12 @@ import Chakra from './components/Fundamentals/Chakra';
 import UseEffectExample from './components/Fundamentals/UseEffectExample';
 import AxiosExample from './components/Fundamentals/AxiosExample';
 import MemoExample from './components/Fundamentals/MemoExample';
+import MountingExample from './components/Fundamentals/MountingExample';
 import { persistor, store } from './app/store';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import './index.css';
-import MountingExample from './components/Fundamentals/MountingExample';
 
 ReactDOM.render(
   <Provider store={store}>

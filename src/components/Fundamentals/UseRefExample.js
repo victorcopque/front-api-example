@@ -7,5 +7,5 @@ export default function UseRefExample() {
     console.log(buttonTest.current.innerHTML);
   }, []);
 
-  return <button ref={buttonTest}>A button that works!</button>;
+  return <button ref={buttonTest}>A button that works 2!</button>;
 }

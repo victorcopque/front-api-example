@@ -11,7 +11,7 @@ export default function UseEffectExample() {
     <div className="App">
       <h1> Hello {name}</h1>;
       <h2>Change the name</h2>
-      <button onClick={() => setName("CodeSandbox")}>CodeSandbox</button>
+      <button onClick={() => setName("CodeSandbox")}></button>
       <button onClick={() => setName("John Doe")}>John Doe</button>
     </div>
   );
