@@ -4,7 +4,7 @@ export default function UseRefExample() {
   const buttonTest = useRef(null);
 
   useEffect(() => {
-    console.log(buttonTest.current);
+    console.log(buttonTest.current.innerHTML);
   }, []);
 
   return <button ref={buttonTest}>A button that works!</button>;
