@@ -12,10 +12,12 @@ import UseEffectExample from './components/Fundamentals/UseEffectExample';
 import AxiosExample from './components/Fundamentals/AxiosExample';
 import MemoExample from './components/Fundamentals/MemoExample';
 import MountingExample from './components/Fundamentals/MountingExample';
+import I18N from './components/i18n';
 import { persistor, store } from './app/store';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import './i18n';
 import './index.css';
 
 ReactDOM.render(
@@ -37,6 +39,7 @@ ReactDOM.render(
           <AxiosExample path="/fundamentals/axios" />
           <MemoExample path="/fundamentals/memo" />
           <MountingExample path="/fundamentals/mounting" />
+          <I18N path="/translation" />
         </Switch>
       </Router>
     </PersistGate>

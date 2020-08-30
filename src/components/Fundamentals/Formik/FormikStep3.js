@@ -23,6 +23,7 @@ export default function Formik3() {
       name: "",
       password: "",
     },
+    validate,
     onSubmit: (values) => {
       alert(JSON.stringify(values));
     },
