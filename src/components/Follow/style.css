@@ -1,0 +1,65 @@
+.follow-container {
+  margin-top: 30px;
+  padding: 20px 30px;
+}
+
+.follow-container .user-profile {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.follow-container .user-profile img {
+  height: 50px;
+  border-radius: 50%;
+}
+
+.follow-container .user-profile p {
+  margin: 0;
+}
+
+.box-suggestions ul {
+  margin: 0;
+  padding: 0;
+}
+
+.box-suggestions li {
+  list-style: none;
+}
+
+.company-item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.company-item img {
+  height: 40px;
+  border-radius: 50%;
+}
+
+.company-item .company-name {
+  margin: 0 0 0 15px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.company-item .followed-count {
+  margin: 0 0 0 15px;
+  font-size: 12px;
+  font-weight: 100;
+}
+
+.company-item .button-follow {
+  background-color: #fafafa;
+  border: none;
+  color:#0095f6;
+  font-weight: bold;
+}
+
+.company-item .button-follow:active {
+  color:#222;
+}

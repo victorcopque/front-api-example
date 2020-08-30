@@ -2,6 +2,7 @@ import React from 'react';
 import BaseLayout from '../components/Base/BaseLayout';
 import Stories from '../components/Stories';
 import Feed from '../components/Feed';
+import Follow from '../components/Follow';
 import './style.css';
 
 export default function FeedPage() {
@@ -12,9 +13,7 @@ export default function FeedPage() {
           <Stories />
           <Feed />
         </div>
-        <div className="suggestions-follow">
-          {/* Escreva aqui */}
-        </div>
+        <Follow />
       </div>
     </BaseLayout>
   )
