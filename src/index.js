@@ -1,42 +1,43 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Testando from './components/Basic/Testando';
-import UseStateExample from './components/Fundamentals/UseStateExample';
-import UseRefExample from './components/Fundamentals/UseRefExample';
-import ParamsExample from './components/Fundamentals/ParamsExample';
-import LinkExample from './components/Fundamentals/LinkExample';
-import StylingExample from './components/Fundamentals/Styling';
-import FormikHandler from './components/Fundamentals/Formik';
-import Chakra from './components/Fundamentals/Chakra';
-import UseEffectExample from './components/Fundamentals/UseEffectExample';
-import AxiosExample from './components/Fundamentals/AxiosExample';
-import MemoExample from './components/Fundamentals/MemoExample';
-import MountingExample from './components/Fundamentals/MountingExample';
+import FeedPage from './pages';
 import { persistor, store } from './app/store';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import * as Sentry from '@sentry/react';
+import { Integrations } from '@sentry/tracing';
 import './index.css';
+
+var mixpanel = require('mixpanel-browser');
+mixpanel.init("06f4f68989aacda9b0419341b588e901");
+
+var USER_ID = "12148";
+mixpanel.identify(USER_ID);
+
+var USER_SIGNUP_DATE = "2020-01-02T21:07:03Z";
+
+mixpanel.people.set({
+  "$email": "jsmith@example.com",
+  "created_at": USER_SIGNUP_DATE,
+  "id": USER_ID,
+  "credits": 150
+});
+
+Sentry.init({
+  dsn: "https://b004072bb919465b9fdfddb08e5a412b@o440994.ingest.sentry.io/5410734",
+  integrations: [
+    new Integrations.BrowserTracing(),
+  ],
+  tracesSampleRate: 1.0,
+});
 
 ReactDOM.render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
       <Router>
         <Switch>
-          <Testando exact path="/" />
-          <Route path="/basic" component={Testando} />
-          {/* <ParamsExample path="/fundamentals/params/:id" /> */}
-          <Route path="/fundamentals/params/:id" component={ParamsExample}/>
-          <UseStateExample path="/fundamentals/use-state" />
-          <UseEffectExample path="/fundamentals/use-effect" />
-          <UseRefExample path="/fundamentals/use-ref" />
-          <LinkExample path="/fundamentals/link" />
-          <StylingExample path="/fundamentals/styling" />
-          <Route path="/fundamentals/formik/:formikType" component={FormikHandler} />
-          <Chakra path="/fundamentals/chakra" />
-          <AxiosExample path="/fundamentals/axios" />
-          <MemoExample path="/fundamentals/memo" />
-          <MountingExample path="/fundamentals/mounting" />
+          <Route path="/insta" component={FeedPage} />
         </Switch>
       </Router>
     </PersistGate>

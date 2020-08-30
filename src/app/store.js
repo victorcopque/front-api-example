@@ -2,17 +2,16 @@ import { applyMiddleware, createStore, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import { persistStore, persistReducer } from 'redux-persist';
-import { CookieStorage } from 'redux-persist-cookie-storage'
-import Cookies from 'cookies-js'
-import testandoReducer from '../components/Basic/testandoSlice';
+import AsyncStorage from '@react-native-community/async-storage';
+import feedReducer from '../components/Feed/feedSlice';
 
-const persistTestandoConfig = {
-  key: 'testando',
-  storage: new CookieStorage(Cookies/*, options */)
+const persistFeedConfig = {
+  key: 'feed',
+  storage: AsyncStorage
 };
 
 const rootReducer = combineReducers({
-  testando: persistReducer(persistTestandoConfig, testandoReducer)
+  feed: persistReducer(persistFeedConfig, feedReducer)
 })
 
 const middleware = applyMiddleware(thunk, logger);

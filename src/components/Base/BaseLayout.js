@@ -1,12 +1,14 @@
-import React from 'react'
-import { ThemeProvider, CSSReset } from "@chakra-ui/core";
+import React from 'react';
+import Nav from './Nav';
+import './style.css';
 
 export default function BaseLayout(props) {
 	return (
-		<ThemeProvider>
-			<CSSReset />
-			<p>Teste</p>
-			{props.children}
-		</ThemeProvider>	
+		<div className="general">
+			<Nav />
+			<div className="main-content">
+				{props.children}
+			</div>
+		</div>
 	)
 }
