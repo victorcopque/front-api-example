@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Post from './Post';
 import axios from 'axios';
 import './style.css';
-import { setPosts, selectPosts } from './feedSlice';
+import { setPosts, selectPosts } from '../../redux/reducers/feedSlice';
 import { useDispatch, useSelector } from 'react-redux';
 
 export default function Feed() {

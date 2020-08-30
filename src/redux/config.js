@@ -3,7 +3,7 @@ import thunk from 'redux-thunk';
 import logger from 'redux-logger';
 import { persistStore, persistReducer } from 'redux-persist';
 import AsyncStorage from '@react-native-community/async-storage';
-import feedReducer from '../components/Feed/feedSlice';
+import feedReducer from './reducers/feedSlice';
 
 const persistFeedConfig = {
   key: 'feed',

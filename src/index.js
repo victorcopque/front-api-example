@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import FeedPage from './pages';
-import { persistor, store } from './app/store';
+import { persistor, store } from './redux/config';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
